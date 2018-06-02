@@ -1,0 +1,28 @@
+server:
+#注册中心服务的端口
+  port: 8761
+spring:
+  application:
+#注册中心服务的名称
+    name: lym-registry-service
+
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+  client:
+#是否向 Eureka 注册服务。该应用为服务注册中心，不需要自注册，设置为 false
+    registerWithEureka: false
+#是否检索服务。该应用为服务注册中心，职责为注册和发现服务，无需检索服务，设置为 false
+    fetchRegistry: false
+    serviceUrl:
+#注册中心服务地址 
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+#设置同步为空时的等待时间。默认 5 * MINUTES   
+    waitTimeInMsWhenSyncEmpty: 0
+#关闭Eureka的自我保护模式    
+    enable-self-preservation: false
+#清理服务间隔，单位毫秒
+    evictionIntervalTimerInMs: 10000
