@@ -1,0 +1,5 @@
+路由网关(zuul):
+lym-eureka-server:注册中心服务
+lym-serviceA:服务A
+lym-serviceB:服务B
+lym-zuul-server:网关服务
