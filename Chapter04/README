@@ -1,0 +1,4 @@
+断路器（hystrix）:
+lym-serviceD:在ribbon使用断路器
+lym-serviceE:Feign中使用断路器
+lym-serviceF:Hystrix Dashboard (断路器：Hystrix 仪表盘)
