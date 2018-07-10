@@ -1,0 +1,3 @@
+分布式配置中心(Spring Cloud Config):
+lym-config-server:配置中心服务
+lym-config-client:普通程序，从配置中心读数据
